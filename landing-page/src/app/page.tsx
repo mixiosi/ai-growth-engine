@@ -23,7 +23,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const GUMROAD_CHECKOUT_URL = "https://gumroad.com/l/ai-growth-engine?wanted=true";
+const GUMROAD_CHECKOUT_URL = "https://mixiosi.gumroad.com/l/nshou?wanted=true";
 
 export default function LandingPage() {
   const [activeTab, setActiveTab] = useState(0);
