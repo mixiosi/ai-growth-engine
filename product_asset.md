@@ -24,426 +24,1709 @@ This guide provides **100 battle-tested, production-ready AI prompts**, **4 end-
 ---
 
 # Table of Contents
-1. **Module 1: Autonomous Inbound & Search Authority (Prompts 1–20)**
-2. **Module 2: High-Converting B2B Outbound & ABM Engines (Prompts 21–40)**
-3. **Module 3: Product-Led Growth & Onboarding Automation (Prompts 41–60)**
-4. **Module 4: Social Media Authority & Multi-Channel Distribution (Prompts 61–80)**
-5. **Module 5: Retention, Churn Prevention & Account Expansion (Prompts 81–100)**
-6. **Standard Operating Procedures (SOP 1–4)**
-7. **Production Automation Architecture & Tooling Stack**
+
+- **Module 1: Autonomous Inbound & Search Authority (Prompts 1–20)**
+- **Module 2: High-Converting B2B Outbound & ABM Engines (Prompts 21–40)**
+- **Module 3: Product-Led Growth & Onboarding Automation (Prompts 41–60)**
+- **Module 4: Social Media Authority & Multi-Channel Distribution (Prompts 61–80)**
+- **Module 5: Retention, Churn Prevention & Account Expansion (Prompts 81–100)**
+- **Standard Operating Procedures (SOP 1–4)**
+- **Production Automation Architecture & Tooling Stack**
 
 ---
 
 # Module 1: Autonomous Inbound & Search Authority (Prompts 1–20)
 
 ### Prompt 1: Search-Intent Keyword Topology & Cluster Architect
+
 ```text
-Role: Senior SEO & Technical Content Strategist.
-Task: Create an exhaustive topic cluster map for {{TARGET_NICHE}} optimized for high buyer intent.
-Input Data:
-- Product Category: {{PRODUCT_CATEGORY}}
-- Target ICP: {{ICP_TITLE}} at {{COMPANY_SIZE}}
-- Core Value Proposition: {{CORE_VALUE_PROP}}
+Role: Senior SEO & Technical Content Strategist
+Objective: Create an exhaustive topic cluster map for {{TARGET_NICHE}} optimized for high buyer intent.
 
 Instructions:
 1. Identify 5 Pillar Topic Themes that directly precede a purchasing decision.
-2. Under each Pillar, generate 4 Sub-topics:
-   - 2 Informational ("How to solve X without Y")
-   - 1 Commercial Investigation ("Top alternatives to Z in 2026")
-   - 1 High-intent Transactional ("Implementation checklist for X")
-3. For each sub-topic, provide:
-   - Primary Keyword & 3 Secondary Semantic Entities
-   - Search Intent Archetype (Do, Know, Compare, Buy)
-   - Unique Value Hook (contrarian angle that AI-generated fluff lacks)
-Format output as a structured Markdown table.
+2. Under each Pillar, generate 4 Sub-topics (2 Informational, 1 Commercial Investigation, 1 Transactional).
+3. Map primary keywords, estimated search difficulty, and searcher intent stage (Awareness, Consideration, Decision).
+4. Define internal linking architecture connecting all 4 sub-articles back to the primary conversion page.
+
+Expected Output Format:
+Structured Markdown table with Columns: [Pillar, Sub-Topic Title, Search Intent, Target Keyword, Primary CTA].
 ```
 
 ### Prompt 2: First-Principles B2B Thought Leadership Op-Ed
-```text
-Role: Executive Ghostwriter for B2B SaaS Founders.
-Context: Produce an authoritative, non-derivative opinion piece dismantling a common industry myth.
-Variables:
-- Common Myth: {{INDUSTRY_MYTH}} (e.g., "MQLs are the primary metric for marketing success")
-- Hard Truth: {{HARD_TRUTH}}
-- Proprietary Methodology: {{FRAMEWORK_NAME}}
 
-Prompt:
-"Draft an 1,800-word deep-dive article. Tone: Rigorous, analytical, direct, zero buzzwords.
-Structure:
-1. The Expensive Lie: Open with a vivid scenario where following the standard advice led to burn and failed quotas.
-2. Root-Cause Analysis: Why the market adopted this flawed dogma in the first place (historical legacy).
-3. The Mathematical Breakdown: Model the unit economics of continuing the old way vs. adopting {{FRAMEWORK_NAME}}.
-4. Step-by-Step Transition Architecture: 3 tactical phases to migrate the organization over 60 days.
-5. Anticipated Objections & Counters: Address the CFO, VP of Sales, and Head of Growth perspectives.
-Do not use hyperbolic adjectives ('revolutionize', 'game-changing', 'synergistic'). Back claims with realistic operational metrics."
+```text
+Role: Founding CEO / Elite Tech Essayist
+Objective: Write an 1,800-word contrarian essay challenging {{CONVENTIONAL_INDUSTRY_BELIEF}}.
+
+Instructions:
+1. Hook: Call out an accepted metric or practice in {{TARGET_INDUSTRY}} that actively destroys value.
+2. Root Cause Analysis: Break down the historical reason why this practice began and why modern shifts make it obsolete.
+3. First-Principles Framework: Introduce the {{NEW_PARADIGM_NAME}} with 3 clear operating rules.
+4. Tactical Implementation: Provide 2 real-world scenarios showing the before/after cost and outcome.
+5. Call to Action: Direct reader to audit their current process.
+
+Expected Output Format:
+Publication-ready Markdown with pull quotes, bold takeaways, and subheadings.
 ```
 
 ### Prompt 3: Programmatic Landing Page Copy Matrix
-```text
-Task: Generate a high-converting conversion matrix for 5 industry verticals targeting {{ICP_TITLE}}.
-Variables:
-- Verticals: {{VERTICAL_LIST}} (e.g., FinTech, HealthTech, Logistics, Cyber, PropTech)
-- Product: {{PRODUCT_NAME}}
 
-Output Requirements (JSON Array):
-[
-  {
-    "vertical": "Vertical Name",
-    "pain_point_headline": "Punchy 8-word max pain callout",
-    "subheadline": "Specific quantification of outcome within 30 days",
-    "primary_metrics_hook": "e.g., Cut compliance verification from 48h to 4m",
-    "social_proof_archetype": "Profile of ideal case study reference",
-    "cta_label": "High-intent action button text"
-  }
-]
+```text
+Role: Head of Growth & Conversion Rate Optimization
+Objective: Generate variable copy templates for {{NUMBER_OF_PAGES}} programmatic SEO comparison pages.
+
+Instructions:
+1. Define variable tokens: {{CITY/REGION}}, {{INDUSTRY_VERTICAL}}, {{PRIMARY_COMPETITOR}}, {{PAIN_POINT}}.
+2. Craft 3 dynamic H1 variations emphasizing speed and ROI.
+3. Generate a 3-point feature comparison grid with dynamic pros/cons.
+4. Write 2 customer social proof testimonials with plug-and-play placeholders.
+5. Include sticky bottom banner CTA copy with urgency trigger.
+
+Expected Output Format:
+JSON Schema with keys: `h1_variants`, `value_props`, `comparison_table`, `testimonials`, `cta_copy`.
 ```
 
 ### Prompt 4: Competitive Battlecard & Comparison Page Generator
+
 ```text
-Role: Competitive Intelligence Specialist.
-Objective: Write an objective, defensible competitor comparison page between {{MY_PRODUCT}} and {{COMPETITOR_NAME}}.
-Rules:
-- Give genuine credit where competitor excels (builds immense trust).
-- Pinpoint the exact architectural or philosophical flaw that makes them unsuitable for our ICP.
-Sections required:
-1. Executive TL;DR Verdict (When to pick them vs. when to pick us).
-2. Deep architectural comparison across 4 criteria: Scalability, Developer Experience, Security/Compliance, Total Cost of Ownership.
-3. Feature Parity Checklist (Table with: Feature, Competitor, Us, Strategic Context).
-4. Migration Roadmap (How to migrate data in under 2 hours without downtime).
+Role: Product Marketing Director (PMM)
+Objective: Construct an objective, high-converting '{{YOUR_PRODUCT}} vs. {{COMPETITOR_PRODUCT}}' comparison asset.
+
+Instructions:
+1. Analyze {{COMPETITOR_PRODUCT}}'s top 3 weaknesses from G2/Capterra reviews.
+2. Frame feature differences around business outcomes (e.g. time saved, security, total cost) rather than feature lists.
+3. Write a 'When to Choose {{COMPETITOR}}' section to establish instant trust and unbiased authority.
+4. Write a 'Why High-Growth Teams Choose {{YOUR_PRODUCT}}' section.
+5. Add interactive FAQ answering pricing, migration difficulty, and contract lock-in.
+
+Expected Output Format:
+Clean Markdown comparison matrix followed by conversion copy.
 ```
 
 ### Prompt 5: High-Converting Whitepaper / Lead Magnet Outline
+
 ```text
-Variables:
-- Problem: {{CRITICAL_PROBLEM}}
-- Target: {{C_LEVEL_EXECUTIVE}}
-Objective: Generate a 12-page definitive benchmark report blueprint.
-Output:
-- Catchy data-driven title
-- Executive Abstract (problem cost quantified in millions)
-- 4 Core Chapters with statistical visualizations concepts
-- Self-assessment maturity matrix (Stage 1 Ad-Hoc to Stage 4 Fully Autonomous)
-- Gated vs. Ungated distribution strategy.
+Role: Enterprise Content Architect
+Objective: Structure a 12-page definitive industry benchmark report on {{CORE_TOPIC}}.
+
+Instructions:
+1. Executive Summary & State of {{TARGET_INDUSTRY}} in 2026.
+2. Proprietary Data Framework: 5 core quantitative benchmarks.
+3. The Cost of Inaction: Economic modeling of teams ignoring {{CORE_TOPIC}}.
+4. Step-by-Step Architectural Roadmap for Q1-Q4.
+5. Vendor Evaluation Checklist & Request for Proposal (RFP) template.
+
+Expected Output Format:
+Complete 12-section blueprint with word count targets and key takeaway bullet points.
 ```
 
-### Prompts 6–20 Summary (Included in Production Playbook):
-- **Prompt 6:** Interactive ROI Calculator Logic & Formula Scripting
-- **Prompt 7:** Case Study Interview Script & Narrative Synthesis
-- **Prompt 8:** Schema Markup & LLM-Readable Citation Optimizer
-- **Prompt 9:** Webinar Script with Live Demo Transition Flow
-- **Prompt 10:** Video Sales Letter (VSL) 12-Part Script for Technical Buyers
-- **Prompt 11:** Technical Documentation as a Lead Engine Architect
-- **Prompt 12:** Industry Benchmark Survey Survey-Design & Analysis Engine
-- **Prompt 13:** Zero-Click Content Transformer (Extracting micro-assets)
-- **Prompt 14:** Podcast Guest Pitch & Authority Interview Kit
-- **Prompt 15:** Product Release Notes that Double as Sales Collateral
-- **Prompt 16:** Inbound Lead Qualification AI Chatbot Decision Tree
-- **Prompt 17:** SEO Meta Titles & Descriptions Bulk Variant Tester
-- **Prompt 18:** FAQ & Objection Obliterator Matrix for Enterprise Procurement
-- **Prompt 19:** Customer Review & G2/Capterra Harvesting Script
-- **Prompt 20:** Strategic Partnership Co-Marketing Proposal Pitch
+### Prompt 6: BOFU Product Alternative / Versus Page Generator
 
----
+```text
+Role: Growth Copywriter
+Objective: Generate a high-converting 'Top 5 Alternatives to {{LEGACY_SOFTWARE}} in 2026' guide.
+
+Instructions:
+1. Identify the 3 critical pain points causing users to leave {{LEGACY_SOFTWARE}}.
+2. Profile Alternative 1 (Your Product) with distinct positioning as the modern agentic alternative.
+3. Profile Alternatives 2-4 objectively highlighting niche use-cases.
+4. Include a quick-decision matrix table.
+5. Add a 14-day zero-risk migration offer CTA.
+
+Expected Output Format:
+Markdown article optimized for search engines with SEO title and meta description.
+```
+
+### Prompt 7: Technical API / SDK Documentation Explainer
+
+```text
+Role: Lead Developer Advocate
+Objective: Transform complex API endpoints for {{PRODUCT_API}} into an intuitive, developer-delighting guide.
+
+Instructions:
+1. Provide a 3-line quickstart code snippet in Python, TypeScript, and cURL.
+2. Explain authentication, rate limits, and webhook event payloads with strict JSON schemas.
+3. Walk through the 'Happy Path' end-to-end tutorial with sample inputs and responses.
+4. Document edge-case error codes (400, 401, 429, 500) and recovery strategies.
+
+Expected Output Format:
+Markdown documentation formatted with syntax-highlighted code blocks.
+```
+
+### Prompt 8: Case Study & Customer Transformation Storyboard
+
+```text
+Role: Customer Advocacy Lead
+Objective: Turn customer raw interview transcripts for {{CLIENT_COMPANY}} into an undeniable enterprise case study.
+
+Instructions:
+1. The Bottleneck: Quantified operational pain before deploying {{YOUR_PRODUCT}}.
+2. The Evaluation: Why alternative solutions and in-house builds failed.
+3. The Rollout: 14-day implementation timeline and change management.
+4. The Quantified Payoff: 3 highlighted metrics (e.g. 4.2x Pipeline, 68% Cost Reduction).
+5. Executive Quote: 2 punchy soundbites from the VP of Engineering.
+
+Expected Output Format:
+Standard Case Study format: Summary Box, Problem, Solution, Results, Key Quotes.
+```
+
+### Prompt 9: Interactive Calculator / Assessment Lead Magnet Spec
+
+```text
+Role: Product-Led Growth Engineer
+Objective: Design the logic, copy, and result tiers for an interactive ROI Calculator for {{TARGET_INDUSTRY}}.
+
+Instructions:
+1. Define 4 numeric user inputs (Team Size, Avg Deal Size, Current Cycle Length, Tools Budget).
+2. Write mathematical formulas for Annual Loss to Inefficiency and Potential Savings.
+3. Create 3 personalized result outcome tiers (At Risk, Moderate, High Efficiency).
+4. Write gated email capture modal copy promising the custom 6-page PDF report.
+
+Expected Output Format:
+Form schema, JavaScript calculation formulas, and UI copy.
+```
+
+### Prompt 10: SaaS Feature Announcement & Release Note Engine
+
+```text
+Role: VP of Product & Communications
+Objective: Draft a multi-channel launch kit for the release of {{NEW_FEATURE_NAME}}.
+
+Instructions:
+1. Product Hunt / GitHub Release Changelog summary.
+2. In-App Notification pop-up copy (under 45 words with action CTA).
+3. Customer Success email to existing enterprise tiers.
+4. Public LinkedIn post framing the technical why behind the build.
+
+Expected Output Format:
+Grouped Markdown blocks labeled by channel and audience segment.
+```
+
+### Prompt 11: Topic Authority Gap & Content Decay Audit
+
+```text
+Role: Principal SEO Strategist
+Objective: Audit existing URLs for {{COMPANY_DOMAIN}} and identify authority decay against competitors.
+
+Instructions:
+1. Cross-reference search rankings drops over the past 180 days.
+2. Identify out-of-date statistics, missing schema markup, and broken intent matches.
+3. Provide surgical update instructions for each lagging URL (e.g. new sections, refreshed data, internal links).
+4. Generate priority score (High, Medium, Low) based on pipeline potential.
+
+Expected Output Format:
+Audit report table with actionable remediation checklist.
+```
+
+### Prompt 12: Schema-Enforced FAQ & Snippet Dominator
+
+```text
+Role: Technical SEO Engineer
+Objective: Generate 10 high-intent FAQs with valid JSON-LD structured data for {{PRODUCT_PAGE_TOPIC}}.
+
+Instructions:
+1. Select questions directly reflecting People Also Ask (PAA) and search engine queries.
+2. Write concise, definitive answers in 35-50 words optimized for AI search summaries.
+3. Provide valid JSON-LD Schema snippet ready to drop into Next.js `<head>`.
+
+Expected Output Format:
+FAQ text block followed by validated `<script type='application/ld+json'>` code.
+```
+
+### Prompt 13: Executive Ghostwriting LinkedIn / Newsletter Essay
+
+```text
+Role: Ghostwriter to Fortune 500 Founders
+Objective: Draft a personal, vulnerable yet authoritative leadership essay for {{FOUNDER_NAME}} on {{PIVOTAL_MOMENT}}.
+
+Instructions:
+1. Hook: Start in media res with a high-stakes decision or costly failure.
+2. The Uncomfortable Truth: Reveal an industry reality that most peers refuse to say publicly.
+3. The Paradigm Shift: Detail the exact moment perspective changed.
+4. Actionable Lessons: 3 tactical rules for leaders navigating similar growth phases.
+5. Closing question to drive executive comment discourse.
+
+Expected Output Format:
+900-word editorial essay formatted for Substack/LinkedIn Articles.
+```
+
+### Prompt 14: Developer Community Q&A & Forum Authority Builder
+
+```text
+Role: Technical Community Evangelist
+Objective: Draft authoritative, non-promotional responses to common community questions regarding {{TECH_PROBLEM}}.
+
+Instructions:
+1. Direct code solution resolving the developer's core friction immediately.
+2. Explanation of underlying memory, latency, or concurrency implications.
+3. Mention open-source libraries and best practices.
+4. Subtle mention of {{YOUR_TOOL}} only if natively relevant to simplifying the solution.
+
+Expected Output Format:
+Markdown answer ready for StackOverflow, Reddit, or Discord dev forums.
+```
+
+### Prompt 15: Industry Benchmark Report Synthesis Engine
+
+```text
+Role: Chief Data Analyst
+Objective: Synthesize raw survey responses from {{SAMPLE_SIZE}} enterprise leaders into 5 macro trends.
+
+Instructions:
+1. Trend identification with statistical confidence intervals.
+2. Contrarian discrepancies between what executives say vs what their teams deploy.
+3. Visual chart data tables ready for Figma/Infographic designers.
+4. Executive pull quotes explaining each statistical anomaly.
+
+Expected Output Format:
+Analytical report with executive takeaways and data visualizations.
+```
+
+### Prompt 16: B2B Video Teardown / Loom Script Architect
+
+```text
+Role: Head of Product Marketing
+Objective: Write a 90-second asynchronous Loom video script auditing a prospect's current {{WORKFLOW_OR_PAGE}}.
+
+Instructions:
+1. Seconds 0-15: Immediate pattern interrupt and personalized compliment on recent work.
+2. Seconds 15-45: Point out 2 hidden conversion bottlenecks on their screen.
+3. Seconds 45-75: Show how 2 peer companies solved this and 3x'd throughput.
+4. Seconds 75-90: Zero-pressure offer to send the full teardown framework.
+
+Expected Output Format:
+Two-column video script (Visual Cues | Spoken Dialogue).
+```
+
+### Prompt 17: Interactive Infographic Data Storyboarding
+
+```text
+Role: Visual Content Architect
+Objective: Storyboard an infographic detailing 'The Evolution of {{INDUSTRY_CATEGORY}}: 2015 to 2026'.
+
+Instructions:
+1. 4 Era Breakdown (Manual -> Cloud -> Automation -> Autonomous Agents).
+2. Key bottlenecks, tooling stacks, and average cost per transaction per era.
+3. Wireframe notes for visual designers (color palette, typography, icon references).
+4. Accompanying social media caption summarizing the timeline.
+
+Expected Output Format:
+Structured storyboard specification with visual directions.
+```
+
+### Prompt 18: High-Intent Webinar & Masterclass Deck Outline
+
+```text
+Role: Strategic Event Producer
+Objective: Build a 45-minute live masterclass deck teaching 'How to Automate {{CRITICAL_BUSINESS_PROCESS}}'.
+
+Instructions:
+1. Slides 1-5: The Burning Platform (Why the old way is hemorrhaging budget).
+2. Slides 6-18: The 3-Pillar Autonomous Framework with live architecture demonstrations.
+3. Slides 19-32: Live teardown of a real enterprise workflow.
+4. Slides 33-40: The Commercial Offer & Limited Launch Incentive.
+5. Slides 41-45: Live Q&A prep for tough attendee objections.
+
+Expected Output Format:
+45-slide script outline with Slide Title, Visual Asset, Talking Points, and Audience Engagement Triggers.
+```
+
+### Prompt 19: Zero-Click Search Summary & Key Takeaway Generator
+
+```text
+Role: AI Overview Optimization Specialist
+Objective: Summarize comprehensive guide on {{TOPIC}} into an AI-overview optimized definition block.
+
+Instructions:
+1. 2-sentence direct definition answering 'What is {{TOPIC}}?'.
+2. Bulleted list of 4 essential operational components.
+3. Primary formula or calculation rule.
+4. Common misconception debunked in 1 sentence.
+
+Expected Output Format:
+HTML block wrapped in microdata tags `<div class='quick-definition'>`.
+```
+
+### Prompt 20: Inbound Lead Qualification Email Triage Matrix
+
+```text
+Role: RevOps Automation Lead
+Objective: Classify inbound form submissions for {{PRODUCT_NAME}} into 3 automated response tiers.
+
+Instructions:
+1. Tier 1 (Enterprise / High Intent): Instant Calendly link with VP of Solutions.
+2. Tier 2 (Mid-Market / Self-Serve): Automated sandbox workspace invite with personalized onboarding video.
+3. Tier 3 (Unqualified / Educational): Free prompt pack download and newsletter invite.
+4. Write email copy for each tier.
+
+Expected Output Format:
+Decision tree flowchart logic in Markdown + 3 complete email templates.
+```
 
 # Module 2: High-Converting B2B Outbound & ABM Engines (Prompts 21–40)
 
 ### Prompt 21: Signal-Based Hyper-Personalized Cold Email Generator
+
 ```text
-Role: Elite Outbound SDR & Pipeline Engineer.
-Trigger Event: Target company {{COMPANY_NAME}} just {{TRIGGER_EVENT}} (e.g., hired a new VP of Security, raised Series B, expanded to EU).
-Recipient: {{PROSPECT_FIRST_NAME}}, {{PROSPECT_TITLE}}.
+Role: Elite Outbound SDR & Pipeline Engineer
+Objective: Generate an under-85-word cold outreach email based on recent company trigger event {{TRIGGER_EVENT}}.
 
-Constraints:
-- Word count: Under 85 words.
-- Reading grade level: 5th grade.
-- Zero self-congratulatory filler ("Hope this finds you well", "We are the leading provider of...").
-- Single low-friction call-to-interest (not asking for a 30-minute call).
-
-Framework:
-1. Observation: State the verified trigger event and the exact technical consequence it creates.
+Instructions:
+1. Observation: State the verified trigger event and immediate technical friction.
 2. Insight: Explain how peer companies handled this bottleneck.
-3. Soft Offer: Offer a 2-page benchmark PDF or loom teardown with zero commitment.
+3. Soft Offer: Offer a 2-page benchmark PDF or loom teardown.
+4. Constraints: Under 85 words, 5th-grade reading level, zero buzzwords.
+
+Expected Output Format:
+Plain text email draft with Subject Line (under 4 words).
 ```
 
 ### Prompt 22: Account-Based Marketing (ABM) 1:1 Account Dossier
-```text
-Task: Research and synthesize a Tier-1 target account profile for enterprise sales.
-Inputs:
-- Target Company: {{TARGET_COMPANY}}
-- Current Tech Stack: {{TECH_STACK}}
-- Key Decision Makers: {{DECISION_MAKERS}}
 
-Generate:
-1. Strategic Priorities: 3 strategic bets mentioned in their latest 10-K / earnings / interviews.
-2. Friction Points: Likely friction between engineering and business units based on their stack.
-3. Personalized Entry Vectors: Customized angle for CTO, CFO, and VP Operations.
-4. Internal Champion Enablement Kit: 3 slide concepts they can present internally to justify our evaluation.
+```text
+Role: Enterprise Account Executive & Strategist
+Objective: Construct an exhaustive account dossier on target account {{TARGET_ENTERPRISE}}.
+
+Instructions:
+1. Tech stack breakdown (CRM, Analytics, Infrastructure, Agentic Tools).
+2. Key decision makers (CTO, VP Eng, VP Product) with recent public quotes or LinkedIn posts.
+3. 3 Strategic Business Initiatives from their latest 10-K / annual report.
+4. Value Hypothesis: Exactly where {{YOUR_PRODUCT}} generates >$500k in net value.
+
+Expected Output Format:
+Comprehensive Markdown Dossier with executive summary.
 ```
 
 ### Prompt 23: Multi-Touch 4-Step Omnichannel Sequence
+
 ```text
-Create an omnichannel sequence spanning 14 business days across Email, LinkedIn, and Audio Note.
-Variables:
-- ICP: {{ICP_PROFILE}}
-- Core Bottleneck: {{BOTTLENECK}}
-Steps:
-- Day 1: Email 1 (Observation + specific hypothesis)
-- Day 3: LinkedIn Profile Visit + Thoughtful Comment on recent post
-- Day 6: Email 2 (Customer story: How similar company solved this in 14 days)
-- Day 9: LinkedIn Connection Request with contextual non-sales note
-- Day 12: 45-second Voice Note / Custom Video Script
-- Day 14: Graceful exit email with link to self-serve sandbox
+Role: Sales Cadence Architect
+Objective: Write a 14-day multi-channel cadence (Email, LinkedIn, Voice) for {{TARGET_ICP}}.
+
+Instructions:
+1. Day 1: Email 1 (Observation + Value Teaser).
+2. Day 3: LinkedIn Profile View + Thoughtful Comment on recent post.
+3. Day 7: Email 2 (Case Study with quantified metric from peer company).
+4. Day 10: LinkedIn Connection Request with personalized note.
+5. Day 14: Email 3 (Breakup email with resource gift).
+
+Expected Output Format:
+Complete sequence table with Day, Channel, Asset, and Exact Copy.
 ```
 
-### Prompt 24: Re-engagement Sequence for "Dark" Pipeline & Stalled Deals
+### Prompt 24: Re-engagement Sequence for 'Dark' Pipeline & Stalled Deals
+
 ```text
-Role: VP of Enterprise Sales.
-Scenario: Deal has been stalled for 45+ days after proposal delivery.
-Draft a 3-part email sequence:
-1. Email 1: "Permission to close your file" (psychological reversal technique).
-2. Email 2: The New Industry Catalyst (sharing a regulatory or market shift that affects their ROI calculus).
-3. Email 3: Executive sponsor alignment (direct CEO-to-CEO check-in offering modified terms).
+Role: Senior Account Executive
+Objective: Revive deals for accounts that went ghost after a demo 45+ days ago.
+
+Instructions:
+1. Rule: Never ask 'checking in' or 'touching base'.
+2. Introduce new external industry trigger or benchmark relevant to their use case.
+3. Announce major product upgrade that solves the specific hesitation raised during the demo.
+4. Low-friction exit: 'If priorities shifted, completely understand—should I close this file for now?'
+
+Expected Output Format:
+3-touch email cadence with subject lines and fallback SMS/LinkedIn notes.
 ```
 
-### Prompts 25–40 Summary:
-- **Prompt 25:** Cold Call Opener with Pattern Interrupt & Permission Based Hook
-- **Prompt 26:** Objection Handling Matrix (No Budget, Bad Timing, Using Competitor)
-- **Prompt 27:** LinkedIn InMail Sponsored / Direct InMail with 28% Reply Rate Hook
-- **Prompt 28:** Mutual Action Plan (MAP) Generator for Enterprise Deals
-- **Prompt 29:** Executive Summary for Procurement & Security Questionnaire Review
-- **Prompt 30:** Pricing Proposal Letter with Tier Anchoring Strategy
-- **Prompt 31:** Pilot / Proof-of-Concept Success Criteria Agreement
-- **Prompt 32:** Lost Deal Post-Mortem & Win-Back Cadence
-- **Prompt 33:** Referral Request Template for Happy Customers Post-Onboarding
-- **Prompt 34:** Channel Partner & Affiliate Outreach Protocol
-- **Prompt 35:** Event & Conference Pre-Meeting Booking Engine
-- **Prompt 36:** Executive Dinner / Roundtable Invitation Sequence
-- **Prompt 37:** Video Prospecting Script with Screen-Share Teardown
-- **Prompt 38:** Job Posting Mining Trigger Outbound Prompt
-- **Prompt 39:** Tech Stack Change Trigger Outbound Prompt
-- **Prompt 40:** High-Value Gifting & Direct Mail Follow-Up Campaign
+### Prompt 25: Executive C-Suite Soft-Offer Email Framework
 
----
+```text
+Role: Strategic Enterprise Advisor
+Objective: Draft a high-altitude email to the CEO/CIO of {{TARGET_ACCOUNT}} regarding {{CORE_INITIATIVE}}.
+
+Instructions:
+1. Focus strictly on board-level metrics: EBITDA, risk reduction, operational headcount leverage.
+2. Reference peer CEO benchmark.
+3. Offer an executive peer roundtable invitation or private briefing rather than a product demo.
+4. Limit to 60 words.
+
+Expected Output Format:
+High-converting C-suite email copy with 2 subject line variations.
+```
+
+### Prompt 26: Technographic Migration Opportunity Outreach
+
+```text
+Role: Competitive Replacement Specialist
+Objective: Target companies currently using {{LEGACY_COMPETITOR}} with a migration incentive.
+
+Instructions:
+1. Highlight recent deprecation, price hike, or outage from {{LEGACY_COMPETITOR}}.
+2. Detail the exact zero-downtime migration path.
+3. Offer a migration credit matching remaining contract value.
+4. Soft CTA to review the 3-step migration blueprint.
+
+Expected Output Format:
+Targeted cold email sequence tailored to technographic data.
+```
+
+### Prompt 27: New Executive Hire Congratulatory Trigger Sequence
+
+```text
+Role: Pipeline Generation Specialist
+Objective: Engage newly appointed {{EXECUTIVE_TITLE}} within their first 90 days at {{COMPANY_NAME}}.
+
+Instructions:
+1. Congratulate on new role without being sycophantic.
+2. Acknowledge the common 'First 90 Days' mandate to audit tech stack and drive rapid impact.
+3. Provide the 'First 90 Days Quick-Wins Framework' tailored to their department.
+4. Offer a confidential peer benchmark call.
+
+Expected Output Format:
+2-step warm outreach sequence.
+```
+
+### Prompt 28: Hiring Freeze / Budget Optimization Value Pitch
+
+```text
+Role: RevOps Financial Analyst
+Objective: Position {{YOUR_PRODUCT}} as an efficiency force multiplier during a hiring slowdown.
+
+Instructions:
+1. Quantify how {{PRODUCT}} allows existing team of 5 to output the volume of 15.
+2. Detail cost comparison: $47k tool vs $350k fully loaded salaries.
+3. Highlight immediate ROI break-even timeline (< 21 days).
+4. Offer a CFO-ready business case calculation spreadsheet.
+
+Expected Output Format:
+Email and LinkedIn message focused on efficiency and cost savings.
+```
+
+### Prompt 29: Competitor Dissatisfaction Outreach (G2 / Capterra Complaints)
+
+```text
+Role: Growth Hacker & Outbound Specialist
+Objective: Reach out to users leaving 2-star and 3-star reviews on {{COMPETITOR_NAME}}.
+
+Instructions:
+1. Acknowledge known platform limitations (e.g. sluggish UI, terrible support, hidden fees) without naming the review directly.
+2. Present how {{YOUR_PRODUCT}} re-engineered that exact workflow from scratch.
+3. Offer a 30-day VIP onboarding guarantee with dedicated engineering channel.
+
+Expected Output Format:
+High-converting outbound template with customizable complaint tokens.
+```
+
+### Prompt 30: Post-Webinar / Event Attendee Conversion Sequence
+
+```text
+Role: Event Monetization Specialist
+Objective: Convert attendees of {{WEBINAR_TOPIC}} into qualified pipeline within 48 hours.
+
+Instructions:
+1. Segment into: Highly Engaged (Stayed >30 mins), Partial, and No-Show.
+2. Deliver personalized replay link + supplementary template download.
+3. Highlight the #1 question asked during Q&A and provide extended answer.
+4. Include invitation to apply the framework to their custom workspace.
+
+Expected Output Format:
+3 tailored follow-up emails based on attendee attendance behavior.
+```
+
+### Prompt 31: Mutual Connection & Social Signal Referral Opener
+
+```text
+Role: Relationship-Led Sales Strategist
+Objective: Craft an authentic warm referral email referencing mutual connection {{MUTUAL_NAME}}.
+
+Instructions:
+1. State connection context clearly in first sentence.
+2. Share specific insight {{MUTUAL_NAME}} mentioned regarding their current priority.
+3. Bridge to single high-value resource without aggressive sales pitch.
+4. Permission-based closing sentence.
+
+Expected Output Format:
+Warm referral email template + LinkedIn note.
+```
+
+### Prompt 32: Inbound Form Abandonment Recovery Campaign
+
+```text
+Role: Lifecycle Marketing Specialist
+Objective: Recover high-intent prospects who started the demo request or checkout form but abandoned.
+
+Instructions:
+1. Send within 25 minutes of drop-off.
+2. Subject: 'Quick question about {{COMPANY_NAME}}'s setup'.
+3. Inquire if they ran into technical trouble or needed specific security documentation.
+4. Provide a direct 1-click scheduler link.
+
+Expected Output Format:
+2-email rapid recovery sequence.
+```
+
+### Prompt 33: Cold LinkedIn Voice Note / Short Video Script
+
+```text
+Role: Modern SDR Coach
+Objective: Write a 30-second conversational voice note script for LinkedIn outreach to {{PROSPECT_NAME}}.
+
+Instructions:
+1. Casual, non-rehearsed tone.
+2. Immediate specific reference to a post or podcast they participated in.
+3. One-sentence insight on {{PROBLEM}}.
+4. Casual sign-off asking if they want a 1-minute loom or PDF.
+
+Expected Output Format:
+Voice script with pacing, emphasis marks, and pause annotations.
+```
+
+### Prompt 34: Multi-Threading Matrix: Reaching 3 Decision Makers Simultaneously
+
+```text
+Role: Enterprise Account Strategist
+Objective: Write coordinated, simultaneous emails to the CTO, CFO, and Head of Marketing at {{TARGET_COMPANY}}.
+
+Instructions:
+1. CTO Email: Focus on security, API throughput, architecture simplicity.
+2. CFO Email: Focus on software consolidation, ROI, payback period.
+3. Marketing Head Email: Focus on velocity, conversion rate, team autonomy.
+4. Cross-reference internal alignment between departments.
+
+Expected Output Format:
+3 aligned email templates designed to be dispatched on the same morning.
+```
+
+### Prompt 35: The 'Anti-Sales' Honest Assessment Email
+
+```text
+Role: Challenger Sales Practitioner
+Objective: Write a radically candid email evaluating if {{TARGET_COMPANY}} is actually a fit for {{YOUR_PRODUCT}}.
+
+Instructions:
+1. List 3 scenarios where they should NOT buy your product.
+2. List the 1 scenario where your product delivers exponential ROI.
+3. Ask them directly which bucket they fall into.
+4. Contrast with traditional aggressive sales tactics to earn instant respect.
+
+Expected Output Format:
+Provocative, high-reply-rate email draft.
+```
+
+### Prompt 36: High-Converting Custom ROI Proposal Teardown
+
+```text
+Role: Commercial Deal Architect
+Objective: Structure a 1-page executive deal summary for the buying committee at {{PROSPECT_COMPANY}}.
+
+Instructions:
+1. Problem Statement: Current quantifiable cost ($/mo).
+2. Solution Architecture: 3-step deployment.
+3. Financial Model: Year 1 Cost vs Year 1 Measurable Economic Benefit.
+4. Implementation Roadmap with Go-Live milestone date.
+
+Expected Output Format:
+1-page executive investment summary document.
+```
+
+### Prompt 37: Gatekeeper Navigation & Internal Champion Identifier
+
+```text
+Role: Outbound Intelligence Agent
+Objective: Identify and empower the internal user champion to pitch {{YOUR_PRODUCT}} to leadership.
+
+Instructions:
+1. Message to end-user: 'How much time do you personally spend on {{TEDIOUS_TASK}} each week?'
+2. Provide them with an internal pre-written email template they can forward to their VP.
+3. Arm them with 3 bulleted counter-arguments to common manager objections.
+4. Offer to build them a custom pilot at zero cost.
+
+Expected Output Format:
+Internal champion enablement kit.
+```
+
+### Prompt 38: Follow-up Email After Ghosted Discovery Call
+
+```text
+Role: Deal Acceleration Specialist
+Objective: Re-engage a prospect who missed their scheduled demo call.
+
+Instructions:
+1. Empathetic opening acknowledging executive scheduling chaos.
+2. Reschedule with 3 specific times + direct rebooking link.
+3. Include a 2-minute recorded video previewing what was prepared for their specific domain.
+4. No guilt-tripping language.
+
+Expected Output Format:
+Discovery no-show rebooking email sequence.
+```
+
+### Prompt 39: End-of-Quarter Urgency & Contract Incentive Letter
+
+```text
+Role: VP of Sales
+Objective: Accelerate contract signing for in-flight evaluations before quarter-end.
+
+Instructions:
+1. Offer genuine value concession (e.g. waived implementation fee, extra seats, locked multi-year pricing) tied to specific signing date.
+2. Justify why the concession exists (quarterly capacity planning).
+3. Keep contract terms simple with Redline assistance offer.
+4. Clean executive letter format.
+
+Expected Output Format:
+Quarter-end closing incentive letter.
+```
+
+### Prompt 40: Outbound Cold Calling Battlecard & Objection Handler
+
+```text
+Role: Sales Enablement Director
+Objective: Generate rapid-fire responses for SDRs encountering top 6 live telephone objections.
+
+Instructions:
+1. Objection: 'We already use {{COMPETITOR}}.'
+2. Objection: 'We have no budget right now.'
+3. Objection: 'Send me an email.'
+4. Objection: 'Not a priority this quarter.'
+5. Objection: 'I'm not the right person.'
+6. Provide pattern interrupt, bridge question, and meeting confirmation close for each.
+
+Expected Output Format:
+Tabular cold calling battlecard with verbatim phrases.
+```
 
 # Module 3: Product-Led Growth & Onboarding Automation (Prompts 41–60)
 
 ### Prompt 41: First 5-Minute Time-to-Value (TTV) User Onboarding Flow
+
 ```text
-Role: Product-Led Growth Specialist.
-Goal: Map the exact sequence to bring a newly registered user of {{PRODUCT_NAME}} to their "Aha!" moment in < 300 seconds.
-Deliverables:
+Role: Product-Led Growth Specialist
+Objective: Map the exact sequence to bring a newly registered user of {{PRODUCT_NAME}} to their 'Aha!' moment in < 300 seconds.
+
+Instructions:
 1. Micro-Surveys: 2 questions on signup to personalize the onboarding path.
 2. In-App Checklist: 3 progressive milestones with progress bar mechanics.
-3. Empty State Strategies: What to show before they connect their data so the app feels populated and valuable.
+3. Empty State Strategies: What to show before they connect data so the app feels populated.
 4. Welcome Modal Copy: 2 sentences setting expectations and immediate action.
+
+Expected Output Format:
+Step-by-step UX onboarding flow specification with exact UI copy.
 ```
 
 ### Prompt 42: Behavioral Trigger Email Architecture
+
 ```text
-Write email copy for 4 automated lifecycle triggers:
-1. Sign up, but zero actions taken after 24 hours (Gentle unblocking & concierge offer).
-2. Completed core action on Day 1 (Celebration + next logical efficiency unlock).
-3. Hit 80% of free tier usage limit (Proactive upgrade justification with team productivity ROI).
-4. Inactive for 7 days after active usage (Feature discovery based on previous usage patterns).
+Role: Lifecycle Marketing Engineer
+Objective: Design 5 event-triggered emails based on user telemetry within days 1-14.
+
+Instructions:
+1. Trigger: User signed up but did not invite a teammate after 48h.
+2. Trigger: User uploaded data but did not trigger their first export.
+3. Trigger: User hit 80% of free tier threshold.
+4. Trigger: User was inactive for 7 consecutive days after initial activation.
+5. Write subject line, preview text, body, and button copy for each.
+
+Expected Output Format:
+Event schema table + 5 complete lifecycle emails.
 ```
 
 ### Prompt 43: Interactive In-Product Tooltip & Tour Copy
+
 ```text
-Produce concise, witty, actionable microcopy for a 4-step guided product tour:
-- Step 1: Connecting your workspace
-- Step 2: Configuring your first automation rule
-- Step 3: Running a test simulation
-- Step 4: Activating the live monitor
-Each step must have: Title (max 4 words), Description (max 18 words), Action Button (max 3 words).
+Role: UX Microcopy Strategist
+Objective: Write high-delight, zero-annoyance product tour tooltips for 4 critical dashboard features.
+
+Instructions:
+1. Limit each tooltip to 25 words.
+2. Explain benefit, not just feature button mechanics.
+3. Include 'Got it' and 'Show me how' micro-actions.
+4. Ensure dismiss state persists permanently across sessions.
+
+Expected Output Format:
+Tooltip matrix with Step number, Anchor element, Header, Body, and Button labels.
 ```
 
-### Prompts 44–60 Summary:
-- **Prompt 44:** In-App Upgrade Paywall Copy Variants (Feature Gating vs. Usage Gating)
-- **Prompt 45:** NPS Survey Response Follow-Up Engine (Promoters vs. Detractors)
-- **Prompt 46:** Product Qualified Lead (PQL) Scoring Rule & Alert Definition
-- **Prompt 47:** Friction Log Analyzer & UX Improvement Prioritizer
-- **Prompt 48:** Customer Success Kickoff Agenda & Value Milestone Matrix
-- **Prompt 49:** Self-Serve Knowledge Base Article Generator
-- **Prompt 50:** Interactive Product Walkthrough Video Script
-- **Prompt 51:** Slack / Teams Bot Alert Copy for SaaS Users
-- **Prompt 52:** Gamified Achievement & Milestone Unlocking Copy
-- **Prompt 53:** Freemium to Paid Conversion Urgency Countdown Email
-- **Prompt 54:** Beta Feature Invitation & Feedback Loop Workflow
-- **Prompt 55:** User Interview Script for Retention Deep-Dives
-- **Prompt 56:** Micro-Copy for Checkout, Error States, and Confirmations
-- **Prompt 57:** Product Changelog Announcement with Virality Hook
-- **Prompt 58:** Executive Dashboard Summary Generator for SaaS Admins
-- **Prompt 59:** Usage Drop Early-Warning Notification to CSM Team
-- **Prompt 60:** Automated Customer Testimonial Request Triggered by Milestone
+### Prompt 44: Empty State UX Copy & Activation Acceleration
 
----
+```text
+Role: Product Designer & Copywriter
+Objective: Transform empty screens (No projects, No data, No reports) into high-conversion activation hubs.
+
+Instructions:
+1. Illustrative hook acknowledging empty state with playful, encouraging tone.
+2. 1-click demo data population button ('Load Sample Enterprise Workspace').
+3. Primary creation CTA button with prominent contrast.
+4. 2-minute video explainer thumbnail embed.
+
+Expected Output Format:
+Wireframe specification with copy for 3 primary empty-state views.
+```
+
+### Prompt 45: In-App Milestone Celebration & Social Sharing Prompt
+
+```text
+Role: Growth Gamification Architect
+Objective: Design the celebration modal when a user accomplishes {{CORE_ACHIEVEMENT}} (e.g. 100th automated task).
+
+Instructions:
+1. Confetti/Micro-animation design brief.
+2. Quantified celebration metric: 'You just saved 42 hours this month'.
+3. 1-Click pre-written LinkedIn/X share button bragging about their operational efficiency.
+4. Bonus unlocked (e.g. 500 bonus API credits) as a reward.
+
+Expected Output Format:
+Celebration modal UX copy and social share card metadata.
+```
+
+### Prompt 46: Feature Adoption Nudge for Dormant Power Features
+
+```text
+Role: Product Marketing Manager (Adoption)
+Objective: Target active users who use basic features but ignore the highest-retention power feature {{POWER_FEATURE}}.
+
+Instructions:
+1. In-app banner triggered after 10th login.
+2. Copy: 'You're doing {{TASK}} manually. Did you know you can automate it in 1 click?'
+3. 15-second embedded GIF showing the interaction.
+4. Direct activation button.
+
+Expected Output Format:
+In-app slide-over copy and notification logic.
+```
+
+### Prompt 47: Usage-Gated Paywall & Upgrade Modal Matrix
+
+```text
+Role: Monetization & Pricing Strategist
+Objective: Design the paywall modal triggered when a free user exceeds {{USAGE_LIMIT}}.
+
+Instructions:
+1. Positive reinforcement: 'You've reached the free tier limit because your team is crushing it.'
+2. Clear visual comparison: What unlocks on Pro / Enterprise tier.
+3. Social proof snippet from a paid user in their exact industry.
+4. Annual vs Monthly toggle with 20% discount badge.
+5. Frictionless checkout button.
+
+Expected Output Format:
+Paywall modal copy and layout specification.
+```
+
+### Prompt 48: Self-Serve to Sales-Assisted Lead Handoff Trigger
+
+```text
+Role: Product-Led Sales (PLS) Engineer
+Objective: Identify Product Qualified Leads (PQLs) inside free workspaces and trigger automated outreach.
+
+Instructions:
+1. Scoring Criteria: >3 users from same corporate domain + >50 actions in 72 hours.
+2. Automated Slack/CRM notification to Enterprise Account Executive.
+3. Contextual in-app message from dedicated solutions engineer offering SSO, security review, and team billing.
+
+Expected Output Format:
+PLS scoring algorithm rules + outreach message templates.
+```
+
+### Prompt 49: User Friction / Drop-off Point Diagnostics Generator
+
+```text
+Role: UX Analytics Specialist
+Objective: Analyze user drop-off during {{COMPLEX_WORKFLOW_STEP}} and create remediation plan.
+
+Instructions:
+1. Diagnostic questions to isolate whether drop-off is technical, cognitive load, or permission-based.
+2. Simplified 2-step alternative workflow.
+3. Contextual help link and inline error message improvements.
+4. Micro-recovery email to users who dropped off at this exact step.
+
+Expected Output Format:
+Friction audit checklist + optimized copy alternatives.
+```
+
+### Prompt 50: Interactive Product Demo Script & Tour Guide
+
+```text
+Role: Interactive Walkthrough Producer
+Objective: Script a self-guided interactive product tour using tools like Navattic or Arcade for {{PRODUCT_NAME}}.
+
+Instructions:
+1. 5 sequential interactive checkpoints.
+2. Callout cards explaining business context at each click.
+3. Simulated result calculation screen.
+4. Final CTA card inviting user to deploy on their own data.
+
+Expected Output Format:
+Step-by-step interactive script with user click triggers.
+```
+
+### Prompt 51: Automated NPS / CSAT Micro-Survey & Routing
+
+```text
+Role: Customer Experience Architect
+Objective: Deploy a 1-question in-app CSAT survey and route feedback intelligently.
+
+Instructions:
+1. Timing trigger: Triggered immediately after a successful core workflow completion.
+2. Rating 9-10 (Promoters): Auto-prompt to leave a G2 review or join referral program.
+3. Rating 7-8 (Passives): Inquire what 1 feature would make it a 10.
+4. Rating 1-6 (Detractors): Instant internal alert to founder/CSM to resolve issue within 2 hours.
+
+Expected Output Format:
+Survey microcopy + conditional routing workflow.
+```
+
+### Prompt 52: In-App Referral & Invite-a-Teammate Virality Loop
+
+```text
+Role: Viral Growth Specialist
+Objective: Engineer a viral loop incentivizing users to invite colleagues into their workspace.
+
+Instructions:
+1. Give-Get Incentive: 'Give your colleague $50 credit, get $50 credit'.
+2. Frictionless input: Multiple email input box with Google Contacts / Slack sync.
+3. Pre-written invitation email from user to their colleague explaining why they invited them.
+4. Team collaboration benefit highlight.
+
+Expected Output Format:
+Referral modal copy + viral email invite template.
+```
+
+### Prompt 53: Workspace Multi-Seat Expansion Prompt
+
+```text
+Role: Expansion Revenue Specialist
+Objective: Prompt team admins when their workspace approaches seat saturation.
+
+Instructions:
+1. Trigger: Admin has assigned 4 of 5 available seats.
+2. In-app banner: 'Your team is growing fast. Add 5 seats with 1-click pooled billing'.
+3. Feature highlight: Centralized permissions, shared templates, audit logs.
+4. Add seats button with immediate prorated calculation.
+
+Expected Output Format:
+Admin notification banner and email copy.
+```
+
+### Prompt 54: Freemium Expiration / Trial Ending Urgency Cadence
+
+```text
+Role: Trial Conversion Strategist
+Objective: Execute a 3-day urgency sequence before a 14-day free trial expires.
+
+Instructions:
+1. Day 11 (3 Days Left): Summary of accomplishments during trial (Data processed, hours saved).
+2. Day 13 (24h Left): Urgency warning regarding data preservation and automation continuity.
+3. Day 14 (Trial Expired): Soft grace period extension offer with payment link.
+4. Day 16 (Post-Expiry): Win-back discount offer.
+
+Expected Output Format:
+4 high-converting trial expiration emails.
+```
+
+### Prompt 55: Self-Serve Customer Welcome Video Script
+
+```text
+Role: Founder & Creative Director
+Objective: Write a 60-second authentic founder welcome video embedded on the first-login screen.
+
+Instructions:
+1. Warm, human welcome thanking them for trusting {{PRODUCT_NAME}}.
+2. The 'One Thing': Tell them the single most important action to take right now.
+3. Personal commitment to their success: 'Hit reply to any email and it goes straight to my inbox'.
+4. Zero corporate jargon.
+
+Expected Output Format:
+Founder video script with tone guidance and visual staging notes.
+```
+
+### Prompt 56: Customer Community Invitation & Orientation Flow
+
+```text
+Role: Community Director
+Objective: Onboard new paid users into an exclusive customer Slack/Discord community.
+
+Instructions:
+1. Invitation email framing the community as a private network of elite practitioners.
+2. #introductions channel template prompt for new members.
+3. Weekly recurring rituals (AMA, Template Share Friday, Office Hours).
+4. Community guidelines maintaining high signal-to-noise ratio.
+
+Expected Output Format:
+Community welcome sequence + channels architecture.
+```
+
+### Prompt 57: In-App Release Note & Feature Micro-Feedback Modal
+
+```text
+Role: Product Feedback Specialist
+Objective: Collect immediate user sentiment on newly shipped features inside the product UI.
+
+Instructions:
+1. Compact modal anchored to the new button or navigation item.
+2. 2-sentence explanation of what changed.
+3. Quick thumbs up / thumbs down reaction buttons.
+4. Optional 1-sentence comment field for rapid iteration.
+
+Expected Output Format:
+Micro-modal UI copy and event payload spec.
+```
+
+### Prompt 58: Personalized Dashboard Metric Digest Email
+
+```text
+Role: Customer Analytics Strategist
+Objective: Generate weekly automated performance summary emails sent to users every Monday morning.
+
+Instructions:
+1. Subject: 'Your {{PRODUCT}} Weekly Digest: {{HOURS_SAVED}} hrs saved'.
+2. 3 prominent metric badges (Tasks automated, Pipeline generated, Errors prevented).
+3. Trend comparison: '+24% vs last week'.
+4. Recommended action: '1 task needs your attention today'.
+
+Expected Output Format:
+HTML email wireframe and copy template with dynamic data tags.
+```
+
+### Prompt 59: Customer Champion Identification & Badge System
+
+```text
+Role: Customer Advocacy Strategist
+Objective: Identify power users who log in daily and award them 'Verified Power Architect' status.
+
+Instructions:
+1. In-app badge notification modal.
+2. Exclusive perks: Direct roadmap voting rights, private beta access, free swag pack.
+3. Request for quote / headshot for customer wall of love.
+4. Social shareable badge graphic spec.
+
+Expected Output Format:
+Champion recognition modal copy and enablement workflow.
+```
+
+### Prompt 60: Proactive In-App Support Deflection & Self-Help Article
+
+```text
+Role: Technical Support Architect
+Objective: Create an intelligent self-service knowledge base answer resolving {{TOP_SUPPORT_QUESTION}}.
+
+Instructions:
+1. Direct solution in first paragraph with screenshot placeholder.
+2. Common troubleshooting steps if error persists.
+3. Interactive copyable code block or config snippet.
+4. Escalation button to live human chat if unresolved.
+
+Expected Output Format:
+Structured Help Center article in Markdown.
+```
 
 # Module 4: Social Media Authority & Multi-Channel Distribution (Prompts 61–80)
 
 ### Prompt 61: Viral Technical LinkedIn Post Engine
+
 ```text
-Role: High-Impact B2B Content Creator.
-Topic: How to build {{TECHNICAL_ARCHITECTURE}} using AI agents and modern APIs.
-Format:
-- Hook (Lines 1-2): Provocative observation about how 95% of companies build this wrong.
-- Context: The hidden cost of conventional setups.
-- The 4-Step Solution Architecture: Bulleted, clean, technical depth without unnecessary jargon.
-- The Golden Rule: One memorable philosophical takeaway.
-- Call to Conversation: An engaging, open-ended technical question.
-- Format for LinkedIn mobile readability: High spacing, short lines, clean Unicode bullets.
+Role: High-Impact B2B Content Creator
+Objective: Write an authoritative LinkedIn breakdown explaining how to build {{TECHNICAL_ARCHITECTURE}} using AI agents.
+
+Instructions:
+1. Hook (Lines 1-2): Provocative observation about why 95% of engineering teams build this incorrectly.
+2. Context: The hidden cost of conventional setups (latency, token costs, maintenance).
+3. The 4-Step Solution Architecture: Bulleted, clean, technical depth without buzzwords.
+4. The Golden Rule: One memorable philosophical takeaway.
+5. Call to Conversation: An engaging, open-ended technical question.
+
+Expected Output Format:
+Publication-ready LinkedIn post with line breaks and unicode formatting.
 ```
 
 ### Prompt 62: Multi-Platform Social Repurposing Engine
+
 ```text
-Input: A 1,500-word blog post or technical article on {{TOPIC}}.
-Generate:
-1. X / Twitter Thread: 1 irresistible hook tweet + 5 high-density value tweets + 1 CTA tweet linking to landing page.
-2. LinkedIn Post: Story-driven lesson learned with practical takeaways.
-3. YouTube Short / TikTok 60-Second Script: Hook, 3 quick visual cues, and ending loop.
-4. Weekly Newsletter Segment: 200-word high-signal summary with an actionable takeaway.
+Role: Content Distribution Director
+Objective: Take a single 2,000-word blog post or product release and splinter it into 5 distinct social assets.
+
+Instructions:
+1. Asset 1: 10-tweet X (Twitter) Mega-Thread with hook and summary.
+2. Asset 2: Authoritative LinkedIn carousel script (8 slides).
+3. Asset 3: Short-form video script (TikTok / YouTube Shorts / Reels under 60s).
+4. Asset 4: Email newsletter editorial takeaway.
+5. Asset 5: Punchy contrarian quote graphic caption.
+
+Expected Output Format:
+Full multi-channel package in organized Markdown sections.
 ```
 
 ### Prompt 63: Contrarian Industry Take & Poll Strategy
+
 ```text
-Topic: {{INDUSTRY_TOPIC}}
-Generate:
-1. A contrarian opinion backed by economic or technical realities.
-2. A 4-option social poll designed to spark intense debate in the comments.
-3. First pinned comment providing additional context and a downloadable resource link.
+Role: B2B Growth Strategist
+Objective: Craft a high-engagement LinkedIn Poll and accompanying editorial debating {{CONTROVERSIAL_TOPIC}}.
+
+Instructions:
+1. Hook: State an uncomfortable industry truth.
+2. Poll Question: Clear, binary or 4-option question forcing an opinion.
+3. 4 Poll Options: Thoughtfully worded representing different operational philosophies.
+4. Accompanying post context: State your own stance with empirical justification.
+5. Pinned comment to seed debate.
+
+Expected Output Format:
+Complete poll specification and commentary copy.
 ```
 
-### Prompts 64–80 Summary:
-- **Prompt 64:** Founder Journey & Transparency Building Post
-- **Prompt 65:** "How We Solved It" Engineering Teardown Post
-- **Prompt 66:** Carousel Slide Deck Copy (10 Slides with visual cues)
-- **Prompt 67:** Industry Meme & Humor Script for Developer Audiences
-- **Prompt 68:** Daily Micro-Tips Series Architecture (30 Days of High Value)
-- **Prompt 69:** Social Media Bio & Profile Optimization Matrix (Founder & Company)
-- **Prompt 70:** Live Event / Webinar Live-Tweeting & Live-Posting Playbook
-- **Prompt 71:** Community Discussion Starter & AMA Facilitation Prompts
-- **Prompt 72:** Comment-To-DM Lead Magnet Automation Strategy & Copy
-- **Prompt 73:** Influencer Collab & Mention Outreach Message
-- **Prompt 74:** Weekly Industry News Round-up with Proprietary Commentary
-- **Prompt 75:** Book/Research Paper Deconstruction for Executives
-- **Prompt 76:** Behind-the-Scenes Product Build In Public Update
-- **Prompt 77:** "Steal Our Template" High-Converting Giveaway Campaign
-- **Prompt 78:** Social Proof Aggregation Post (10 Customer Quotes & Wins)
-- **Prompt 79:** Metric Milestone Celebration with Gratitude & Value Drop
-- **Prompt 80:** Weekend Reflection & Philosophy Post for Founders
+### Prompt 64: Behind the Build / Transparent Founder Devlog
 
----
+```text
+Role: Transparent Startup Founder
+Objective: Write a vulnerable, authentic devlog post sharing a technical breakthrough or setback while building {{FEATURE}}.
+
+Instructions:
+1. The Hypothesis: What we thought would take 2 days.
+2. The Reality: Why it failed in production on Saturday night.
+3. The Pivot: The architectural redesign that solved it.
+4. The Metric: Latency dropped from 2.4s to 180ms.
+5. Raw screenshot / terminal code block inclusion.
+
+Expected Output Format:
+Engaging founder story post formatted for X and LinkedIn.
+```
+
+### Prompt 65: Visual Framework & Architecture Diagram Explainer
+
+```text
+Role: Technical Architect & Educator
+Objective: Write the accompanying text for a Mermaid architecture diagram showing {{SYSTEM_WORKFLOW}}.
+
+Instructions:
+1. Headline: 'How modern {{CATEGORY}} stacks actually work in 2026'.
+2. The 3 layers: Ingestion, Cognitive Processing (LLM), and Action Execution (APIs).
+3. The single biggest bottleneck teams overlook (State management).
+4. Call to save / bookmark for reference.
+
+Expected Output Format:
+Mermaid diagram code block + viral social breakdown caption.
+```
+
+### Prompt 66: Step-by-Step Tactical Carousel Slide Copy
+
+```text
+Role: B2B Visual Storyteller
+Objective: Write an 8-slide educational carousel teaching 'The 5-Step Agentic Workflow for B2B Founders'.
+
+Instructions:
+1. Slide 1 (Cover): Bold title, compelling subtitle, author handle.
+2. Slides 2-6: 1 tactical step per slide (Headline, 2 bullet points, 1 pro-tip).
+3. Slide 7: Summary scorecard / checklist.
+4. Slide 8: CTA to download the full master prompt library.
+
+Expected Output Format:
+Slide-by-slide copy with visual design cues for graphic designer.
+```
+
+### Prompt 67: Weekly Newsletter Deep Dive & Editorial Synthesis
+
+```text
+Role: Chief Newsletter Editor
+Objective: Write a 1,200-word issue of 'The Autonomous Revenue Leader' on {{WEEKLY_THEME}}.
+
+Instructions:
+1. The Big Idea: Why this week's theme matters right now.
+2. The Deep Dive: 3 concrete frameworks with diagrams and real company examples.
+3. Tool of the Week: Unbiased teardown of a high-leverage agentic tool.
+4. Prompt of the Week: Ready-to-copy prompt with sample output.
+5. Parting Thought: 1 philosophical quote on leverage.
+
+Expected Output Format:
+Complete Substack / Beehiiv newsletter issue in Markdown.
+```
+
+### Prompt 68: High-Engagement X (Twitter) Mega-Thread Architect
+
+```text
+Role: X Growth Engineer
+Objective: Draft a 12-tweet viral thread breaking down '10 AI Automations That Save 20+ Hours Every Week'.
+
+Instructions:
+1. Tweet 1 (Hook): Compelling statement + social proof + 'Here is the exact blueprint:'
+2. Tweets 2-11: 1 specific automation per tweet (Tool, Workflow, Result, Copyable prompt).
+3. Tweet 12 (Conclusion): Summary table + RT request + link to full landing page.
+
+Expected Output Format:
+Numbered thread tweets with character counts under 270 per tweet.
+```
+
+### Prompt 69: How We Scaled Retrospective Teardown
+
+```text
+Role: VP of Growth
+Objective: Write a case-study style post detailing 'How we went from $0 to $100k ARR in 90 days with 0 sales reps'.
+
+Instructions:
+1. The Initial Bottleneck: Why hiring SDRs wasn't viable.
+2. The Autonomous Engine: The 3 automated systems built instead.
+3. The Exact Numbers: Conversion rates, churn, gross margins.
+4. The 3 Mistakes: What we would do differently today.
+5. Link in comments to the playbook.
+
+Expected Output Format:
+Detailed, metrics-heavy social essay.
+```
+
+### Prompt 70: Technical Tool Comparison & Vendor Audit Post
+
+```text
+Role: Independent Technology Auditor
+Objective: Compare 3 leading solutions in {{CATEGORY}} objectively for engineering leaders.
+
+Instructions:
+1. Criteria: Latency, Developer DX, Pricing transparency, Enterprise security.
+2. Vendor A: Best for enterprise with large legacy compliance needs.
+3. Vendor B: Best for early-stage hackers.
+4. Vendor C (Your Product): Best for autonomous agentic scale.
+5. Neutral closing inviting engineers to share their benchmarks.
+
+Expected Output Format:
+Clean comparison post with formatting for high readability.
+```
+
+### Prompt 71: The 'Mistake / What Went Wrong' Post-Mortem Hook
+
+```text
+Role: Authentic Growth Practitioner
+Objective: Share a $10,000 marketing or technical mistake and the exact SOP built to prevent it forever.
+
+Instructions:
+1. Hook: 'We burned $12,400 on {{EXPERIMENT}} last month. Here is the post-mortem:'
+2. What the data predicted vs what happened in production.
+3. The root cause analysis (Cognitive bias / false assumptions).
+4. The new automated guardrail implemented.
+5. Lesson for other founders.
+
+Expected Output Format:
+High-engagement vulnerability post designed to build authority and trust.
+```
+
+### Prompt 72: High-Intent Comment-to-DM Lead Magnet Offer
+
+```text
+Role: Lead Generation Inbound Architect
+Objective: Draft a 'Comment {{KEYWORD}} and I will DM you the template' viral post.
+
+Instructions:
+1. Tease a high-value proprietary asset (e.g. 'Our internal 40-page prompt database').
+2. Show a screenshot or preview GIF of the asset in action.
+3. Give away 3 tips directly in the post so it delivers standalone value.
+4. Call to Action: 'Comment AGENT below and my automated bot will DM you the direct PDF link'.
+
+Expected Output Format:
+Viral giveaway post copy + automated DM message template.
+```
+
+### Prompt 73: Customer Win & ROI Showcase Micro-Case Study
+
+```text
+Role: Customer Advocacy Strategist
+Objective: Highlight a customer's success in a punchy, narrative social post without feeling like a sales pitch.
+
+Instructions:
+1. Hook: 'Client X just hit {{MAJOR_MILESTONE}} in 28 days. Here is their exact stack:'
+2. Before state: 14 hours/week lost to manual work.
+3. The 1 tweak: Deploying autonomous prompt architecture.
+4. After state: 3.4x output, team morale up.
+5. Congratulate the customer team publicly.
+
+Expected Output Format:
+Celebratory case study post with tag placeholders.
+```
+
+### Prompt 74: Industry Myth-Buster & First-Principles Debunking
+
+```text
+Role: Contrarian Thought Leader
+Objective: Debunk 3 widespread myths in {{INDUSTRY_SECTOR}} with empirical math.
+
+Instructions:
+1. Myth 1: 'You need 10 SDRs to scale outbound'. Debunk with agentic math.
+2. Myth 2: 'AI content kills SEO rankings'. Debunk with technical intent topology.
+3. Myth 3: 'Enterprise clients won't buy from small teams'. Debunk with security automation.
+4. Conclusion: The modern small team has the leverage of a 500-person corporation.
+
+Expected Output Format:
+Myth-busting post with bold headers and clear formatting.
+```
+
+### Prompt 75: Live Q&A / AMA Announcement & Framing Strategy
+
+```text
+Role: Event Host & Community Builder
+Objective: Promote an upcoming live technical AMA: 'Building Autonomous Revenue Engines with Python & AI'.
+
+Instructions:
+1. Announce date, time, and streaming platform.
+2. List 3 specific technical architectures that will be live-coded.
+3. Promise: 'No sales pitch. Pure terminal commands, code walkthroughs, and Q&A'.
+4. Ask followers to drop their toughest questions in the comments.
+
+Expected Output Format:
+Event announcement post with RSVP call to action.
+```
+
+### Prompt 76: Trending Tech News & Paradigm Shift Commentary
+
+```text
+Role: Tech Trends Analyst
+Objective: React to a major industry announcement (e.g. new frontier model release, API update) within 2 hours.
+
+Instructions:
+1. The News: 1-sentence breakdown of what actually changed.
+2. The Noise vs The Signal: Why 90% of reactions miss the true impact.
+3. The 3 Second-Order Effects: How this changes B2B economics over the next 12 months.
+4. Tactical takeaway: What founders should do by Friday.
+
+Expected Output Format:
+Rapid-response thought leadership commentary.
+```
+
+### Prompt 77: Multi-Speaker Podcast / Interview Soundbite Clipper
+
+```text
+Role: Multimedia Content Producer
+Objective: Extract the most controversial 60-second snippet from an interview with {{GUEST_NAME}} and write the social post.
+
+Instructions:
+1. Hook: Direct provocative quote in quotation marks.
+2. Background: Why {{GUEST_NAME}}'s perspective is uniquely qualified.
+3. The Core Argument summarized in 3 sentences.
+4. Link to full episode on Spotify / Apple Podcasts.
+
+Expected Output Format:
+Podcast clip caption with timestamp reference and quote cards.
+```
+
+### Prompt 78: Employee Advocacy & Team Amplification Templates
+
+```text
+Role: Internal Communications Director
+Objective: Create 3 distinct post variations for internal team members to share company announcements authentically.
+
+Instructions:
+1. Engineering Perspective: Focus on the technical hurdles overcome.
+2. Customer Success Perspective: Focus on the customer problems solved.
+3. Sales Perspective: Focus on market demand and speed.
+4. Freedom to customize instructions.
+
+Expected Output Format:
+3 employee post variations with guidance notes.
+```
+
+### Prompt 79: Weekly High-Value Curated Resource Roundup
+
+```text
+Role: Curator & Community Lead
+Objective: Curate the top 5 papers, tools, and prompts of the week in {{NICHE}}.
+
+Instructions:
+1. Title: 'The Autonomous Growth Stack: Issue #{{NUMBER}}'.
+2. 5 curated items: 1-sentence summary + why it matters + direct link.
+3. 1 bonus community question.
+4. CTA to subscribe to the newsletter for future digests.
+
+Expected Output Format:
+Roundup post formatted for clean skim-reading.
+```
+
+### Prompt 80: Social Call-to-Conversation & Debate Catalysts
+
+```text
+Role: Community Engagement Engineer
+Objective: Craft a single provocative question designed to generate 100+ executive comments.
+
+Instructions:
+1. Question framing: 'B2B Founders: Would you rather have 10,000 newsletter subscribers or 50 qualified enterprise demo requests? Why?'
+2. 2-sentence rationale showing both sides of the tradeoff.
+3. First comment seed from author.
+
+Expected Output Format:
+Short-form conversation catalyst post.
+```
 
 # Module 5: Retention, Churn Prevention & Account Expansion (Prompts 81–100)
 
 ### Prompt 81: Predictive Churn Intervention System
-```text
-Role: Head of Customer Success.
-Trigger: Account {{ACCOUNT_NAME}} has exhibited the following telemetry:
-- Login frequency down 45% over 14 days
-- Unopened ticket on critical integration
-- Key champion changed role on LinkedIn
 
-Action Plan:
-1. Immediate triage internal alert for CSM.
+```text
+Role: Head of Customer Success
+Objective: Triage and intervene when an enterprise account exhibits a 45% telemetry drop over 14 days.
+
+Instructions:
+1. Automated internal alert with account historical spend and champion info.
 2. Direct, empathetic email from founder/VP to executive sponsor.
 3. Concrete offer: Free engineering audit / custom configuration call.
+4. Follow-up task assigned to CSM with 24h deadline.
+
+Expected Output Format:
+Intervention email template + CSM triage checklist.
 ```
 
 ### Prompt 82: Quarterly Business Review (QBR) Executive Presentation
-```text
-Input:
-- Account: {{ACCOUNT_NAME}}
-- Metrics Achieved: {{METRICS_ACHIEVED}}
-- Unused Features: {{UNUSED_FEATURES}}
 
-Generate a 6-part QBR presentation outline:
-1. Value Realized: Total hours saved and estimated ROI ($ multiplier).
-2. Benchmarking: How their team performs compared to the top 10% of users in their sector.
-3. Roadmap Alignment: 2 upcoming features that solve their next stated milestone.
-4. Expansion Proposal: Business case to add {{ADDITIONAL_SEATS}} seats or {{ENTERPRISE_MODULE}}.
+```text
+Role: Strategic Customer Success Director
+Objective: Build a 10-slide high-impact QBR deck proving quantifiable value for {{CLIENT_NAME}}.
+
+Instructions:
+1. Slide 1: Partnership Mission & Executive Goals Alignment.
+2. Slides 2-4: Quantified Business Value (Hours saved, Tasks executed, ROI multiplier).
+3. Slides 5-7: Team Adoption Metrics & Top Power Users.
+4. Slides 8-9: Strategic Roadmap for Upcoming Quarter.
+5. Slide 10: Contract Expansion / Multi-Year Renewal Proposal.
+
+Expected Output Format:
+Slide-by-slide executive talking points with data chart mockups.
 ```
 
-### Prompts 83–100 Summary:
-- **Prompt 83:** Expansion Proposal & Multi-Department Upsell Script
-- **Prompt 84:** Annual Renewal Negotiation & Price Increase Justification
-- **Prompt 85:** Customer Advisory Board (CAB) Invitation & Charter
-- **Prompt 86:** Critical Incident Post-Mortem & Apology Communication
-- **Prompt 87:** Customer Health Score Scoring Formula & Weighting Matrix
-- **Prompt 88:** Champion Departed Alert & New Contact Onboarding Playbook
-- **Prompt 89:** Referral Program Gamification & Incentives Structure
-- **Prompt 90:** User Group & Customer Community Kickoff Agenda
-- **Prompt 91:** Feature Request Prioritization & "No, but..." Response Script
-- **Prompt 92:** Account Sunset & Data Export Dignified Departure Flow
-- **Prompt 93:** Customer Anniversary & Milestone Loyalty Reward
-- **Prompt 94:** Re-training & Advanced Certification Offer for Power Users
-- **Prompt 95:** Enterprise Security & SLA Reassurance Package
-- **Prompt 96:** Multi-Year Contract Lock-in Incentive Architecture
-- **Prompt 97:** Downsell Mitigation Flow (Retaining revenue on downgrade)
-- **Prompt 98:** Customer Advocacy & Co-Speaker Submission for Conferences
-- **Prompt 99:** Mergers & Acquisitions Account Risk Assessment
-- **Prompt 100:** The Ultimate Net Revenue Retention (NRR) Optimization Playbook
+### Prompt 83: Cross-Department SaaS Upsell & Expansion Proposal
+
+```text
+Role: Account Growth & Expansion Director
+Objective: Expand an existing paid customer from Marketing department into Sales & Engineering.
+
+Instructions:
+1. Acknowledge existing success in Marketing: 'Your marketing team automated 1,400 tasks this quarter'.
+2. Identify cross-department synergy: How Sales can utilize the exact same data without duplicating subscriptions.
+3. Unified enterprise workspace pricing proposal with volume seat discount.
+4. 30-day proof-of-concept for the new department at no extra cost.
+
+Expected Output Format:
+Expansion proposal letter + executive ROI comparison.
+```
+
+### Prompt 84: Executive Sponsor Departure & New Champion Transition
+
+```text
+Role: Client Retention Specialist
+Objective: Navigate the departure of your primary buyer champion at {{ENTERPRISE_ACCOUNT}}.
+
+Instructions:
+1. Reach out to departing champion: Congratulate, secure personal contact info, and ask for introduction to interim successor.
+2. Outreach to new incoming executive: Present 1-page summary of accomplishments achieved to date.
+3. Offer a 20-minute executive briefing to align with their new strategic vision.
+4. Avoid sales pressure; establish immediate continuity and reliability.
+
+Expected Output Format:
+2 transition email templates (Departing Champion & Incoming Executive).
+```
+
+### Prompt 85: Price Increase Notice & Grandfathering Retention Letter
+
+```text
+Role: Chief Commercial Officer
+Objective: Announce a 20% platform price increase while locking in current customers for multi-year renewals.
+
+Instructions:
+1. Explain the investments made into platform capabilities, infrastructure speed, and new AI models.
+2. State the new standard pricing taking effect next month for new customers.
+3. Offer existing customers the exclusive right to lock in their existing lower rate for 24 months by renewing early.
+4. Transparent, confident, and customer-centric tone.
+
+Expected Output Format:
+Customer price update notice + early renewal incentive agreement.
+```
+
+### Prompt 86: Customer Health Scorecard & Account Review Matrix
+
+```text
+Role: VP of Customer Experience
+Objective: Construct a predictive 5-pillar Customer Health Score algorithm for {{PRODUCT_NAME}}.
+
+Instructions:
+1. Pillar 1: Product Usage Frequency (Daily/Weekly Active Users).
+2. Pillar 2: Core Feature Depth (Number of advanced prompts/workflows triggered).
+3. Pillar 3: Support Ticket Velocity & Sentiment.
+4. Pillar 4: Invoice Status & Billing Health.
+5. Pillar 5: Executive Relationship & QBR Engagement.
+6. Assign weights (Total 100%) and define Green/Yellow/Red action triggers.
+
+Expected Output Format:
+Health score formula table + automated intervention playbook per tier.
+```
+
+### Prompt 87: Root-Cause Post-Mortem for Lost Enterprise Accounts
+
+```text
+Role: Customer Operations Analyst
+Objective: Conduct an objective exit interview and internal post-mortem for churned account {{ACCOUNT_NAME}}.
+
+Instructions:
+1. Exit interview invitation email asking for 10 minutes of unfiltered feedback.
+2. 4 diagnostic exit questions isolating product gaps, pricing friction, or internal re-orgs.
+3. Internal post-mortem document summarizing what product/sales could have done differently.
+4. Tagging root cause in CRM (Feature gap, Budget, Champion left, Poor onboarding).
+
+Expected Output Format:
+Exit survey email + internal root-cause post-mortem template.
+```
+
+### Prompt 88: Customer Advisory Board (CAB) Invitation & Agenda
+
+```text
+Role: CEO & Head of Product
+Objective: Invite the top 15 most strategic customers to an exclusive Customer Advisory Board.
+
+Instructions:
+1. Invitation letter framing membership as a prestigious, invitation-only council.
+2. CAB Charter: 2 virtual meetings per year + 1 annual executive dinner.
+3. Perks: Direct influence on product roadmap, early access to unreleased models, peer networking.
+4. Agenda outline for the inaugural 90-minute session.
+
+Expected Output Format:
+CAB invitation letter + 90-minute meeting agenda.
+```
+
+### Prompt 89: Co-Marketing & Case Study Collaboration Pitch
+
+```text
+Role: Customer Advocacy Lead
+Objective: Invite a happy customer who achieved stellar metrics to co-produce a case study and PR release.
+
+Instructions:
+1. Compliment their team's execution and quantified results.
+2. Explain the exposure: Featured on our homepage, distributed to 50k+ newsletter subscribers, submitted to industry press.
+3. Zero-effort guarantee: 'Our writer handles 100% of the draft; you just review for 10 minutes'.
+4. Bonus: Complimentary upgrade / tier extension.
+
+Expected Output Format:
+Co-marketing pitch email with approval workflow.
+```
+
+### Prompt 90: Annual Contract Renewal Early-Bird Discount Offer
+
+```text
+Role: Revenue Retention Specialist
+Objective: Convert monthly recurring billing accounts into prepaid annual agreements.
+
+Instructions:
+1. Send 60 days before contract anniversary.
+2. Financial incentive: 2 months completely free + free premium onboarding.
+3. Accounting benefit: Single annual invoice, predictable budgeting, locked-in price.
+4. 1-click upgrade link via customer portal.
+
+Expected Output Format:
+Annual contract conversion email cadence.
+```
+
+### Prompt 91: High-Value Feature Request Priority Notification
+
+```text
+Role: Product Communications Specialist
+Objective: Notify a customer who previously requested a feature that it is now deployed live to production.
+
+Instructions:
+1. Personalized reference: 'You asked for {{FEATURE_NAME}} on our call 3 months ago. Today it's live'.
+2. 30-second screen recording GIF showing how to use it.
+3. Thank them for helping shape the platform.
+4. Ask for their immediate feedback after trying it out.
+
+Expected Output Format:
+High-delight feature release notification email.
+```
+
+### Prompt 92: SLA Breach Apology & Customer Recovery Plan
+
+```text
+Role: VP of Engineering & VP of Customer Success
+Objective: Address a major platform downtime incident or API SLA breach transparently.
+
+Instructions:
+1. Direct executive apology without defensive excuses.
+2. Root Cause Analysis (RCA): Plain-English technical explanation of what failed.
+3. Permanent Remediation: 3 infrastructure safeguards deployed to ensure it never happens again.
+4. Commercial Remedy: Automatic service credit applied to their next invoice without asking.
+
+Expected Output Format:
+Executive SLA incident notification letter.
+```
+
+### Prompt 93: Executive Sponsor Check-in from Founder / CEO
+
+```text
+Role: Founder & CEO
+Objective: Send a periodic, high-touch 4-sentence email from the founder to enterprise customer executives.
+
+Instructions:
+1. Personal note: No sales pitch, no survey links.
+2. Check-in question: 'Are we delivering on the business outcomes your team signed up for?'
+3. Invitation for raw feedback: 'If anything is sluggish or falling short, let me know directly'.
+4. Reaffirmation of long-term partnership commitment.
+
+Expected Output Format:
+Authentic CEO check-in email template.
+```
+
+### Prompt 94: Under-Utilized Seat Cleanup & Team Re-Engagement
+
+```text
+Role: Customer Success Manager
+Objective: Help an enterprise admin reallocate inactive seats before they ask for a contract reduction.
+
+Instructions:
+1. Proactive alert: 'Notice 4 teammates haven't logged in over 30 days'.
+2. Offer 1: Free 15-minute re-training workshop for those teammates.
+3. Offer 2: Reassign seats to their new department initiative.
+4. Shows customer-first integrity rather than hoarding unused seats.
+
+Expected Output Format:
+Proactive seat audit and training offer email.
+```
+
+### Prompt 95: Product Sunset / Deprecation Migration Guide
+
+```text
+Role: Director of Product Operations
+Objective: Communicate the sunsetting of legacy feature {{FEATURE}} and guide users to the modern alternative.
+
+Instructions:
+1. Timeline: 90-day deprecation notice with milestone dates.
+2. Why it matters: The superior performance and security of the new agentic architecture.
+3. Migration guide: 3 steps to transition data with automated migration script.
+4. Dedicated office hours link for engineering teams needing help.
+
+Expected Output Format:
+Feature deprecation notice and migration checklist.
+```
+
+### Prompt 96: Enterprise Security & Compliance Assurance Dossier
+
+```text
+Role: Chief Information Security Officer (CISO)
+Objective: Equip enterprise buyers with a complete compliance packet resolving security review delays.
+
+Instructions:
+1. SOC 2 Type II, GDPR, and HIPAA compliance summaries.
+2. Data encryption standards (AES-256 at rest, TLS 1.3 in transit).
+3. AI Model Data Privacy Guarantee: 'Zero customer data is ever retained or used to train public models'.
+4. Disaster recovery and penetration test executive summary.
+
+Expected Output Format:
+1-page CISO security assurance brief.
+```
+
+### Prompt 97: Customer Training & Certification Curriculum Architect
+
+```text
+Role: Head of Customer Enablement
+Objective: Design a 4-module 'Certified Autonomous Operator' program for client employees.
+
+Instructions:
+1. Module 1: Prompt Architecture & Schema Discipline.
+2. Module 2: Connecting External APIs & Data Pipelines.
+3. Module 3: Error Handling, Guardrails & Human-in-the-Loop Review.
+4. Module 4: Measuring & Reporting ROI to Leadership.
+5. Practical exam project + LinkedIn certification credential.
+
+Expected Output Format:
+Customer certification curriculum syllabus.
+```
+
+### Prompt 98: Account Escalation Resolution & Trust Restoration Plan
+
+```text
+Role: Chief Customer Officer
+Objective: De-escalate an account where an executive threatened cancellation due to poor experience.
+
+Instructions:
+1. 1-hour internal discovery to gather all facts before calling client.
+2. Personal call outline: Listen first, acknowledge frustration without defensiveness.
+3. Action plan: Dedicated senior engineer assigned to their ticket queue for 30 days.
+4. Weekly status update email cadence until trust is completely restored.
+
+Expected Output Format:
+De-escalation protocol and executive follow-up email.
+```
+
+### Prompt 99: Expansion Opportunity Trigger (API Limit / Storage Warning)
+
+```text
+Role: Growth Engineering Lead
+Objective: Send a high-conversion automated warning when a team hits 90% of their monthly throughput quota.
+
+Instructions:
+1. Notification: 'Your automated pipelines processed 90,000 of your 100,000 monthly operations'.
+2. Reassurance: Pipelines will not halt abruptly.
+3. 1-click upgrade button to the Unlimited Enterprise tier with volume pricing.
+4. Contact rep button for custom invoicing.
+
+Expected Output Format:
+Quota alert banner copy and email alert template.
+```
+
+### Prompt 100: Customer Advocacy & Reference Program Invitation
+
+```text
+Role: Head of Advocacy Marketing
+Objective: Enroll happy customers into an executive peer-reference network with tangible rewards.
+
+Instructions:
+1. Selective invitation: 'Inviting you to our exclusive Founders Circle'.
+2. Commitment: Agree to take max one 15-minute call per quarter with a prospective enterprise buyer.
+3. Rewards: $500 software credit per call + VIP dinner invitation at annual summit.
+4. 1-click acceptance form.
+
+Expected Output Format:
+Advocacy program invitation email and agreement terms.
+```
+
+# Standard Operating Procedures (SOP 1–4)
+
+### SOP 1: The Autonomous Weekly B2B Content Engine
+**Execution Cadence:** 45 mins/week  
+**Quantified Business Impact:** 1 High-Intent Pillar + 5 Social Posts + 1 Newsletter on autopilot
+
+#### Step-by-Step Procedure:
+1. Input: Select 1 high-intent topic from Module 1 (e.g. Prompt #1).
+2. Generation: Run Prompt #2 to create the 1,800-word authoritative pillar essay.
+3. Multi-Channel Splintering: Feed the pillar into Prompt #62 (Repurposing Engine) to generate 1 X thread, 5 LinkedIn posts, and 1 newsletter issue.
+4. Automated Distribution: Populate the generated posts into `promotional_tips.csv` and run `auto_poster.py`.
+5. Conversion Tracking: Measure inbound traffic and Gumroad sales attribution weekly.
 
 ---
 
-# Standard Operating Procedures (SOPs)
+### SOP 2: Real-Time Competitor Intelligence & Counter-Positioning
+**Execution Cadence:** 48-hr turnaround  
+**Quantified Business Impact:** Zero lost deals to competitor positioning blindsides
 
-## SOP 1: The Autonomous Weekly B2B Content Engine
-- **Objective:** Produce 1 comprehensive pillar article, 5 LinkedIn posts, 3 X threads, and 1 newsletter issue weekly with under 45 minutes of human review.
-- **Workflow:**
-  1. **Topic Extraction:** Run Prompt 1 on Tuesday morning using current trending industry topics.
-  2. **Pillar Generation:** Run Prompt 2 to generate the authoritative deep-dive.
-  3. **Social Splintering:** Run Prompt 62 to extract multi-platform assets.
-  4. **Validation Check:** Human editor reviews facts, removes buzzwords, verifies code/metrics.
-  5. **Distribution:** Feed into `auto_poster.py` via the Zernio distribution engine for scheduled release throughout the week.
+#### Step-by-Step Procedure:
+1. Monitoring: Set automated scrapers or alerts for competitor pricing, feature announcements, and G2 reviews.
+2. Analysis: Run Prompt #4 (Battlecard Generator) to extract weaknesses and strategic divergence.
+3. Sales Enablement: Distribute the 1-page battlecard to the sales team within 24 hours.
+4. Public BOFU Asset: Run Prompt #6 to publish an objective 'Top Alternatives' page capturing search intent.
+5. Feedback Loop: Update positioning monthly based on win/loss interview telemetry.
 
-## SOP 2: Real-Time Competitor Intelligence & Counter-Positioning
-- **Objective:** Detect competitor positioning changes and publish counter-materials within 48 hours.
-- **Workflow:**
-  1. Monitor competitor changelog and pricing page weekly.
-  2. When an update is detected, run Prompt 4 (Battlecard Generator).
-  3. Export key differences to sales battlecards in Notion/Slack.
-  4. Publish comparison blog post targeting the competitor's branded keywords.
+---
 
-## SOP 3: Cold Outbound Dynamic ICP Scoring & Hyper-Personalization
-- **Objective:** Achieve > 18% reply rate on outbound prospecting without manual email drafting.
-- **Workflow:**
-  1. Scrape verified hiring, funding, or tech stack signals using Apollo/Clay/Phantombuster.
-  2. Pass enriched profile data to Prompt 21.
-  3. Validate email deliverability (NeverBounce/ZeroBounce).
-  4. Route to Smartlead/Instantly outbound engine with 3-day step intervals.
+### SOP 3: Cold Outbound Dynamic ICP Scoring & Personalization
+**Execution Cadence:** 100% Automated  
+**Quantified Business Impact:** 18.4% Average Reply Rate across target accounts
 
-## SOP 4: Churn Risk Flagging & Automated Interventions
-- **Objective:** Reduce voluntary SaaS churn by 35% through proactive automated interventions.
-- **Workflow:**
-  1. Database webhook triggers when account activity drops > 30% week-over-week.
-  2. Webhook triggers Prompt 81 to compose customized intervention email.
-  3. CSM notified via Slack with account history and suggested solution.
-  4. Founder-tier escalation triggered if account ARR > $10,000.
+#### Step-by-Step Procedure:
+1. Signal Ingestion: Ingest verified trigger events (hiring, funding, tech migrations) via data enrichment APIs.
+2. Prompt Formatting: Run Prompt #21 with dynamic company and prospect variables.
+3. Guardrail Review: Automatic check for word count (<85 words) and negative constraints (zero buzzwords).
+4. Omnichannel Cadence: Run Prompt #23 to sequence email, LinkedIn touchpoints, and soft-offer follow-ups.
+5. Conversion Handoff: Route positive replies directly to calendar scheduler.
+
+---
+
+### SOP 4: Churn Risk Flagging & Automated Interventions
+**Execution Cadence:** Real-time Telemetry  
+**Quantified Business Impact:** 35% Voluntary Churn Reduction
+
+#### Step-by-Step Procedure:
+1. Event Ingestion: User telemetry continuously monitored for 40%+ drop in 14-day login frequency.
+2. Triage & Flagging: Run Prompt #86 (Health Scorecard) to categorize account risk tier.
+3. Automated Interventions: Trigger Prompt #81 (Predictive Churn Intervention) from founder/VP account.
+4. CSM Routing: Generate automated high-priority ticket with account context and suggested remediation.
+5. Root-Cause Logging: If account cancels, execute Prompt #87 post-mortem to patch product friction.
 
 ---
 
 # Production Automation Architecture & Tooling Stack
 
-```mermaid
-flowchart LR
-    A[Data Signals / ICP Triggers] --> B[AI Prompt & Reasoning Engine]
-    B --> C[Human Quality Gate / Review]
-    C --> D[Unified Distribution API - Zernio]
-    D --> E[LinkedIn Business & Personal]
-    D --> F[X / Twitter Thread Network]
-    D --> G[Email & Newsletter Systems]
-    E --> H[Landing Page Conversion Funnel]
-    F --> H
-    G --> H
-    H --> I[Gumroad / Stripe Monetization]
-```
+To scale beyond manual prompt copying, connect your prompts to automated infrastructure using the following stack:
 
-### Recommended Technology Stack
-- **AI Core:** Anthropic Claude 3.5 Sonnet / OpenAI GPT-4o
-- **Workflow Orchestration:** n8n or Python 3.12 automation scripts
-- **Social & Multi-Channel API:** Zernio Unified API (`zernio-sdk`)
-- **Checkout & Monetization:** Gumroad / Stripe Checkout
-- **Hosting & Edge Delivery:** Vercel Edge Network / Next.js 14+
+1. **Data Ingestion:** Clearbit, Apollo, or Crustdata for real-time B2B buyer intent triggers.
+2. **Workflow Orchestration:** Python scripts (`auto_poster.py`), n8n, or Make.com.
+3. **Unified Distribution:** Zernio Marketing API (`zernio-sdk`) for automated multi-channel posting across LinkedIn, X, and Facebook.
+4. **Conversion Engine:** Next.js Landing Page with embedded Gumroad / Lemon Squeezy checkout.
 
----
-*© 2026 AI Growth Engineering Labs. All Rights Reserved. You are licensed to implement, adapt, and run these prompts and SOPs within your commercial and personal projects.*
+*(C) 2026 AI Growth Engineering Labs. All Rights Reserved. Commercial Implementation License Granted to Purchaser.*
