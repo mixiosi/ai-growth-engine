@@ -8,9 +8,10 @@
 
 ---
 
-## ⚡ Quick Links
-* 🚀 **[Get the Full 41-Page PDF Guide & 100-Prompt Vault on Gumroad ($47)](https://mixiosi.gumroad.com/l/nshou?wanted=true)**
-* 📦 **Live Demo Checkout:** [mixiosi.gumroad.com/l/nshou](https://mixiosi.gumroad.com/l/nshou?wanted=true)
+## ⚡ Active Products & Data Assets
+* 🚀 **[Product 1: The Autonomous AI Growth Engine ($47 / $29 w/ code PRODUCTHUNT)](https://mixiosi.gumroad.com/l/nshou?wanted=true)** — 41-page PDF guide, 100 enterprise prompts, 4 SOPs, Python distribution engine
+* 📊 **[Product 2: US Contractor & Home Services B2B Lead Database ($37)](https://mixiosi.gumroad.com/l/homeserviceleads)** — 335+ verified direct business records across 7 major US metro markets with cold outreach playbook
+* 📦 **Live Web Store Demo:** [http://localhost:3000](http://localhost:3000)
 
 ---
 

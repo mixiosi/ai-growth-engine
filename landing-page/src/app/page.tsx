@@ -21,9 +21,11 @@ import {
   Clock,
   Send,
   ExternalLink,
+  Database,
 } from "lucide-react";
 
 const GUMROAD_CHECKOUT_URL = "https://mixiosi.gumroad.com/l/nshou?wanted=true";
+const GUMROAD_LEAD_VAULT_URL = "https://mixiosi.gumroad.com/l/homeserviceleads";
 
 export default function LandingPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -254,8 +256,8 @@ Action Plan:
             <a href="#calculator" className="hover:text-white transition-colors">
               ROI Calculator
             </a>
-            <a href="#engine" className="hover:text-white transition-colors">
-              Python Engine
+            <a href="#pricing" className="hover:text-white transition-colors text-emerald-400 font-semibold">
+              B2B Lead Vault
             </a>
             <a href="#faq" className="hover:text-white transition-colors">
               FAQ
@@ -747,88 +749,157 @@ print(f"Posted successfully! ID: {result.post['_id']}")`}
 
       {/* Pricing / Checkout Embed Section */}
       <section id="pricing" className="py-20 border-t border-slate-900 bg-slate-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-2">
-              Simple, One-Time Investment
+              Autonomous Growth Catalog
             </h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold text-white">
-              Get Instant Access Today
+              Instant Access Solutions
             </h3>
             <p className="text-slate-400 mt-2 text-sm">
-              No subscriptions. No hidden upgrades. Complete source files and lifetime license.
+              Zero recurring fees. 100% production-ready source code, prompts, and actionable market intelligence.
             </p>
           </div>
 
-          {/* Pricing Box */}
-          <div className="rounded-3xl border-2 border-indigo-500/50 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 p-8 sm:p-10 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
-              Launch Week: 68% Off
-            </div>
+          {/* Products Grid */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Card 1: AI Growth Engine */}
+            <div className="rounded-3xl border-2 border-indigo-500/50 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 bg-indigo-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
+                Product Hunt Featured
+              </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-6">
               <div>
-                <h4 className="text-2xl font-black text-white">
-                  The Complete Autonomous AI Growth Bundle
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-950/40 text-indigo-300 text-xs font-semibold mb-4">
+                  <Bot className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Flagship AI Prompt & Code Bundle</span>
+                </div>
+                <h4 className="text-2xl font-black text-white mb-2">
+                  The Autonomous AI Growth Engine
                 </h4>
-                <p className="text-slate-400 text-sm mt-1">
-                  Everything you need to automate B2B traffic, outbound, and retention.
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  100 schema-enforced enterprise prompts across 5 core growth stages, 4 end-to-end production SOPs, and full Python multi-channel auto-poster source code.
                 </p>
+
+                <div className="flex items-baseline gap-2 mb-6">
+                  <span className="text-slate-500 line-through text-lg font-bold">$147</span>
+                  <span className="text-4xl font-black text-white tracking-tight">$47</span>
+                  <span className="text-xs text-slate-400">USD (or $29 with code PRODUCTHUNT)</span>
+                </div>
+
+                <div className="space-y-3 py-6 border-y border-slate-800 text-sm">
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>100 Structured Prompts</strong> across 5 modules</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>4 Battle-Tested SOPs</strong> with metrics & schemas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Python Zernio Engine</strong> (`auto_poster.py`)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Curated Promotional CSV</strong> with viral hooks</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Commercial License</strong> & Lifetime Updates</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-slate-500 line-through text-lg font-bold">$147</span>
-                <span className="text-5xl font-black text-white tracking-tight">$47</span>
-                <span className="text-xs text-slate-400">USD</span>
+
+              <div className="mt-8">
+                <a
+                  href={GUMROAD_CHECKOUT_URL}
+                  className="gumroad-button w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-95 text-white font-bold text-base shadow-lg shadow-indigo-600/30 transition-all text-center"
+                >
+                  <span>Get Growth Engine ($47)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    <span>Instant Digital ZIP</span>
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-4 h-4 text-indigo-400" />
+                    <span>PDF + Markdown + Python</span>
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 my-8 py-6 border-y border-slate-800 text-sm">
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>100 Structured Prompts</strong> across 5 modules</span>
+            {/* Card 2: Contractor & Home Service B2B Lead Vault */}
+            <div className="rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 right-0 bg-emerald-600 text-white text-[11px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
+                High-Yield Data Vault
               </div>
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>4 Battle-Tested SOPs</strong> with metrics & schemas</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>Python Zernio Engine</strong> (`auto_poster.py`)</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>Curated Promotional CSV</strong> with high-converting hooks</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>Commercial License</strong> for clients & teams</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span><strong>Lifetime Updates</strong> as frontier models evolve</span>
-              </div>
-            </div>
 
-            {/* Direct Gumroad Embed Button */}
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href={GUMROAD_CHECKOUT_URL}
-                className="gumroad-button w-full inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 hover:opacity-95 text-white font-extrabold text-lg shadow-xl shadow-indigo-600/30 transition-all text-center"
-              >
-                <span>Instant Download Now — $47</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs font-semibold mb-4">
+                  <Database className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Verified B2B Market Intelligence</span>
+                </div>
+                <h4 className="text-2xl font-black text-white mb-2">
+                  US Contractor & Home Services Lead Vault
+                </h4>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  335+ verified local contractor businesses across Roofing, HVAC, Plumbing, & Electrical in 7 high-growth metro markets, complete with cold outreach scripts.
+                </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Encrypted 256-bit Gumroad Checkout</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check className="w-4 h-4 text-indigo-400" />
-                <span>Instant Markdown & Python Code Delivery</span>
-              </span>
+                <div className="flex items-baseline gap-2 mb-6">
+                  <span className="text-slate-500 line-through text-lg font-bold">$99</span>
+                  <span className="text-4xl font-black text-white tracking-tight">$37</span>
+                  <span className="text-xs text-slate-400">USD one-time</span>
+                </div>
+
+                <div className="space-y-3 py-6 border-y border-slate-800 text-sm">
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>335+ Direct Business Records</strong> (Austin, Dallas, Phoenix...)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Direct Contact Channels:</strong> Phone, Website, Physical Address</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Aggregator-Free:</strong> 100% direct owner/operator domains</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Contractor Outreach Playbook:</strong> Cold email & call scripts</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span><strong>Dual Format:</strong> Clean CSV + Excel (.xlsx) ready for CRM</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href={GUMROAD_LEAD_VAULT_URL}
+                  className="gumroad-button w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:opacity-95 text-white font-bold text-base shadow-lg shadow-emerald-600/30 transition-all text-center"
+                >
+                  <span>Get Contractor Vault ($37)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    <span>Encrypted Checkout</span>
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span>Instant CSV + XLSX Download</span>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -918,11 +989,11 @@ print(f"Posted successfully! ID: {result.post['_id']}")`}
             <a href="#sops" className="hover:text-slate-300 transition-colors">
               SOPs
             </a>
-            <a href="#engine" className="hover:text-slate-300 transition-colors">
-              Python Engine
-            </a>
             <a href={GUMROAD_CHECKOUT_URL} className="hover:text-slate-300 transition-colors">
-              Gumroad Store
+              AI Growth Engine ($47)
+            </a>
+            <a href={GUMROAD_LEAD_VAULT_URL} className="hover:text-emerald-400 transition-colors">
+              Contractor B2B Vault ($37)
             </a>
           </div>
         </div>
